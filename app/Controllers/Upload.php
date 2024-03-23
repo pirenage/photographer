@@ -20,7 +20,7 @@ class Upload extends BaseController {
 
         if ($this->upload->do_upload('image')) {
             $data = $this->upload->data();
-            $image_path = 'uploads/' . $data['file_name'];
+            $image_path = 'uploads/' . $data['foto'];
             $this->image_model->insert_image($image_path);
             $this->load_gallery();
         } else {

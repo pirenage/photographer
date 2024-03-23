@@ -8,8 +8,8 @@ class Upload extends BaseController {
     public function __construct() {
         parent::__construct();
         $this->load->model('image_model');
+        $this->load = $this->load->library('loader');
     }
-
     public function index() {
         $this->load->view('index');
     }

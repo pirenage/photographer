@@ -1,6 +1,12 @@
 <?= $this->extend('layout/main') ?>
 <?= $this->extend('layout/menu') ?>
+ <!-- DataTables -->
+        <link href="<?= base_url()?>/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url()?>/assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <script src="<?= base_url()?>/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="<?= base_url()?>/assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 <?= $this->section('isi') ?>
+
 <div class="col-sm-12">
     <div class="page-title-box">
         <h4 class="page-title">Galeri Foto</h4>
@@ -44,4 +50,9 @@
                             </div>
                         </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#dataphotographer').DataTable();
+    });
+</script>
 <?= $this->endSection('') ?>

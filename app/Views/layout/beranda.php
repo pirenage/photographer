@@ -18,18 +18,4 @@
                             </div>
                         </div>
 </div>
-<div class="card m-b-30">
-                            <h4 class="card-header mt-0">Upload Foto Terbaikmu</h4>
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="alert alert-info">
-                                <form id="uploadForm" enctype="multipart/form-data" action="<?= base_url('Upload/upload_image') ?>" method="post">
-                                    <input type="file" name="image" id="image">
-                                    <button type="submit">Upload</button>
-                                </form>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-</div>
 <?= $this->endSection('') ?>

@@ -6,6 +6,6 @@ class Layout extends BaseController
 {
     public function index(): string
     {
-        return view('layout/main');
+        return view('layout/beranda');
     }
 }

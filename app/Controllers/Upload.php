@@ -1,15 +1,14 @@
 <?php
-
 namespace App\Controllers;
-defined('BASEPATH') OR exit('No direct script access allowed');
 
+use App\Controllers\BaseController;
 class Upload extends BaseController {
 
     public function __construct() {
         parent::__construct();
         $this->load->model('image_model');
-        $this->load = $this->load->library('loader');
     }
+
     public function index() {
         $this->load->view('index');
     }
@@ -29,9 +28,18 @@ class Upload extends BaseController {
         }
     }
 
+    public function initController($request, $response, $logger)
+    {
+        // Panggil metode initController() dari kelas induk
+    parent::initController($request, $response, $logger);
+
+    // Lakukan inisialisasi atau setup lainnya di sini
+
+    }
+
     public function load_gallery() {
         $data['images'] = $this->image_model->get_images();
-        $this->load->view('gallery', $data);
+        $this->load->view('gallery/galleryview', $data);
     }
 }
 ?>

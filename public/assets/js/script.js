@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     // Upload image using AJAX
     $('#uploadForm').submit(function(e){
@@ -13,9 +14,6 @@ $(document).ready(function(){
             success: function(response){
                 $('#gallery').html(response);
                 $('#uploadForm')[0].reset();
-            },
-            error: function(xhr, status, error) {
-                console.error('Error:', error);
             }
         });
     });
@@ -26,9 +24,6 @@ $(document).ready(function(){
         type: 'GET',
         success: function(response){
             $('#gallery').html(response);
-        },
-        error: function(xhr, status, error) {
-            console.error('Error:', error);
         }
     });
 });
